@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lainpunk1</title>
+    <meta name="description" content="Lainpunk1's super cool website">
+    <meta property="og:title" content="Lainpunk1">
+    <meta property="og:type" content="developer website">
+    <meta property="og:url" content="lainpunk1.github.com">
+    <meta property="og:image" content="icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+
+<div id="hero">    <pre>
+   ██▓    ▄▄▄       ██▓ ███▄    █  ██▓███   █    ██  ███▄    █  ██ ▄█▀ ▄██
+  ▓██▒   ▒████▄    ▓██▒ ██ ▀█   █ ▓██░  ██▒ ██  ▓██▒ ██ ▀█   █  ██▄█▒ ▀▀██▒
+  ▒██░   ▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒▓██░ ██▓▒▓██  ▒██░▓██  ▀█ ██▒▓███▄░   ██▒
+  ▒██░   ░██▄▄▄▄██ ░██░▓██▒  ▐▌██▒▒██▄█▓▒ ▒▓▓█  ░██░▓██▒  ▐▌██▒▓██ █▄   ██▒
+  ░██████▒▓█   ▓██▒░██░▒██░   ▓██░▒██▒ ░  ░▒▒█████▓ ▒██░   ▓██░▒██▒ █▄ ░██▒
+  ░ ▒░▓  ░▒▒   ▓▒█░░▓  ░ ▒░   ▒ ▒ ▒▓▒░ ░  ░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒ ░▓▒▒
+  ░ ░ ▒  ░ ▒   ▒▒ ░ ▒ ░░ ░░   ░ ▒░░▒ ░     ░░▒░ ░ ░ ░ ░░   ░ ▒░░ ░▒ ▒░  ▒ ░
+    ░ ░    ░   ▒    ▒ ░   ░   ░ ░ ░░        ░░░ ░ ░    ░   ░ ░ ░ ░░ ░   ▒ ░
+      ░  ░     ░  ░ ░           ░             ░              ░ ░  ░     ░</pre>
+    <pre>
+   ██▓    ▄▄▄       ██▓ ███▄    █  ██▓███   █    ██  ███▄    █  ██ ▄█▀ ▄██
+  ▓██▒   ▒████▄    ▓██▒ ██ ▀█   █ ▓██░  ██▒ ██  ▓██▒ ██ ▀█   █  ██▄█▒ ▀▀██▒
+  ▒██░   ▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒▓██░ ██▓▒▓██  ▒██░▓██  ▀█ ██▒▓███▄░   ██▒
+  ▒██░   ░██▄▄▄▄██ ░██░▓██▒  ▐▌██▒▒██▄█▓▒ ▒▓▓█  ░██░▓██▒  ▐▌██▒▓██ █▄   ██▒
+  ░██████▒▓█   ▓██▒░██░▒██░   ▓██░▒██▒ ░  ░▒▒█████▓ ▒██░   ▓██░▒██▒ █▄ ░██▒
+  ░ ▒░▓  ░▒▒   ▓▒█░░▓  ░ ▒░   ▒ ▒ ▒▓▒░ ░  ░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒ ░▓▒▒
+  ░ ░ ▒  ░ ▒   ▒▒ ░ ▒ ░░ ░░   ░ ▒░░▒ ░     ░░▒░ ░ ░ ░ ░░   ░ ▒░░ ░▒ ▒░  ▒ ░
+    ░ ░    ░   ▒    ▒ ░   ░   ░ ░ ░░        ░░░ ░ ░    ░   ░ ░ ░ ░░ ░   ▒ ░
+      ░  ░     ░  ░ ░           ░             ░              ░ ░  ░     ░</pre>
+    <pre>
+   ██▓    ▄▄▄       ██▓ ███▄    █  ██▓███   █    ██  ███▄    █  ██ ▄█▀ ▄██
+  ▓██▒   ▒████▄    ▓██▒ ██ ▀█   █ ▓██░  ██▒ ██  ▓██▒ ██ ▀█   █  ██▄█▒ ▀▀██▒
+  ▒██░   ▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒▓██░ ██▓▒▓██  ▒██░▓██  ▀█ ██▒▓███▄░   ██▒
+  ▒██░   ░██▄▄▄▄██ ░██░▓██▒  ▐▌██▒▒██▄█▓▒ ▒▓▓█  ░██░▓██▒  ▐▌██▒▓██ █▄   ██▒
+  ░██████▒▓█   ▓██▒░██░▒██░   ▓██░▒██▒ ░  ░▒▒█████▓ ▒██░   ▓██░▒██▒ █▄ ░██▒
+  ░ ▒░▓  ░▒▒   ▓▒█░░▓  ░ ▒░   ▒ ▒ ▒▓▒░ ░  ░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒ ░▓▒▒
+  ░ ░ ▒  ░ ▒   ▒▒ ░ ▒ ░░ ░░   ░ ▒░░▒ ░     ░░▒░ ░ ░ ░ ░░   ░ ▒░░ ░▒ ▒░  ▒ ░
+    ░ ░    ░   ▒    ▒ ░   ░   ░ ░ ░░        ░░░ ░ ░    ░   ░ ░ ░ ░░ ░   ▒ ░
+      ░  ░     ░  ░ ░           ░             ░              ░ ░  ░     ░</pre>
+    <pre>
+   ██▓    ▄▄▄       ██▓ ███▄    █  ██▓███   █    ██  ███▄    █  ██ ▄█▀ ▄██
+  ▓██▒   ▒████▄    ▓██▒ ██ ▀█   █ ▓██░  ██▒ ██  ▓██▒ ██ ▀█   █  ██▄█▒ ▀▀██▒
+  ▒██░   ▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒▓██░ ██▓▒▓██  ▒██░▓██  ▀█ ██▒▓███▄░   ██▒
+  ▒██░   ░██▄▄▄▄██ ░██░▓██▒  ▐▌██▒▒██▄█▓▒ ▒▓▓█  ░██░▓██▒  ▐▌██▒▓██ █▄   ██▒
+  ░██████▒▓█   ▓██▒░██░▒██░   ▓██░▒██▒ ░  ░▒▒█████▓ ▒██░   ▓██░▒██▒ █▄ ░██▒
+  ░ ▒░▓  ░▒▒   ▓▒█░░▓  ░ ▒░   ▒ ▒ ▒▓▒░ ░  ░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒ ░▓▒▒
+  ░ ░ ▒  ░ ▒   ▒▒ ░ ▒ ░░ ░░   ░ ▒░░▒ ░     ░░▒░ ░ ░ ░ ░░   ░ ▒░░ ░▒ ▒░  ▒ ░
+    ░ ░    ░   ▒    ▒ ░   ░   ░ ░ ░░        ░░░ ░ ░    ░   ░ ░ ░ ░░ ░   ▒ ░
+      ░  ░     ░  ░ ░           ░             ░              ░ ░  ░     ░</pre>
+    <pre>
+   ██▓    ▄▄▄       ██▓ ███▄    █  ██▓███   █    ██  ███▄    █  ██ ▄█▀ ▄██
+  ▓██▒   ▒████▄    ▓██▒ ██ ▀█   █ ▓██░  ██▒ ██  ▓██▒ ██ ▀█   █  ██▄█▒ ▀▀██▒
+  ▒██░   ▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒▓██░ ██▓▒▓██  ▒██░▓██  ▀█ ██▒▓███▄░   ██▒
+  ▒██░   ░██▄▄▄▄██ ░██░▓██▒  ▐▌██▒▒██▄█▓▒ ▒▓▓█  ░██░▓██▒  ▐▌██▒▓██ █▄   ██▒
+  ░██████▒▓█   ▓██▒░██░▒██░   ▓██░▒██▒ ░  ░▒▒█████▓ ▒██░   ▓██░▒██▒ █▄ ░██▒
+  ░ ▒░▓  ░▒▒   ▓▒█░░▓  ░ ▒░   ▒ ▒ ▒▓▒░ ░  ░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒ ░▓▒▒
+  ░ ░ ▒  ░ ▒   ▒▒ ░ ▒ ░░ ░░   ░ ▒░░▒ ░     ░░▒░ ░ ░ ░ ░░   ░ ▒░░ ░▒ ▒░  ▒ ░
+    ░ ░    ░   ▒    ▒ ░   ░   ░ ░ ░░        ░░░ ░ ░    ░   ░ ░ ░ ░░ ░   ▒ ░
+      ░  ░     ░  ░ ░           ░             ░              ░ ░  ░     ░</pre>
+</div>
+
+
+
+<div class="absolute_center">
+<div class="logo pre1">
+    <pre>
+   ██▓    ▄▄▄       ██▓ ███▄    █  ██▓███   █    ██  ███▄    █  ██ ▄█▀ ▄██
+  ▓██▒   ▒████▄    ▓██▒ ██ ▀█   █ ▓██░  ██▒ ██  ▓██▒ ██ ▀█   █  ██▄█▒ ▀▀██▒
+  ▒██░   ▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒▓██░ ██▓▒▓██  ▒██░▓██  ▀█ ██▒▓███▄░   ██▒
+  ▒██░   ░██▄▄▄▄██ ░██░▓██▒  ▐▌██▒▒██▄█▓▒ ▒▓▓█  ░██░▓██▒  ▐▌██▒▓██ █▄   ██▒
+  ░██████▒▓█   ▓██▒░██░▒██░   ▓██░▒██▒ ░  ░▒▒█████▓ ▒██░   ▓██░▒██▒ █▄ ░██▒
+  ░ ▒░▓  ░▒▒   ▓▒█░░▓  ░ ▒░   ▒ ▒ ▒▓▒░ ░  ░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒ ░▓▒▒
+  ░ ░ ▒  ░ ▒   ▒▒ ░ ▒ ░░ ░░   ░ ▒░░▒ ░     ░░▒░ ░ ░ ░ ░░   ░ ▒░░ ░▒ ▒░  ▒ ░
+    ░ ░    ░   ▒    ▒ ░   ░   ░ ░ ░░        ░░░ ░ ░    ░   ░ ░ ░ ░░ ░   ▒ ░
+      ░  ░     ░  ░ ░           ░             ░              ░ ░  ░     ░</pre>
+</div>
+<div class="logo"><span class="center"><h1>LAINPUNK1</h1></span></div>
+<div class="logo"><span class="center"><h2><ti>TINKERER // DEVELOPER</ti></h2></span></div>
+<div class="logo"><span class="center"><span class= "container links">
+    <span><a href="#about" class="btn">ABOUT</a></span>
+    <span><a href="https://www.github.com/lainpunk1" class="btn">GITHUB</a></span>
+    <span><a href="#contact" class="btn">CONTACT</a></span>
+    </span></span></div>
+</div>
+
+<div class="overlayAbout" id="about">
+    <a class="cancel" href="#"></a>
+<div class="absolute_center about" >
+    <img class="picture" src="lain.jpg" alt="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis dignissimos facilis molestias nemo pariatur quia. Consequatur fugiat hic laboriosam minima molestiae, nihil nostrum odio reiciendis similique tempora. Culpa, dolor.</p>
+</div>
+</div>
+
+<div class="overlayContact" id="contact">
+    <a class="cancel" href="#"></a>
+<div class="absolute_center contact">
+    <p>Let's get in touch</p>
+    <p class="mail">LAINPUNK1@PROTONMAIL.COM</p>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
