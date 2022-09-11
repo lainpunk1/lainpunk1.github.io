@@ -1,11 +1,6 @@
 @font-face {
-    font-family: 'IosevkaTerm';
-    src: url('Iosevka-Term-SS01.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'IosevkaTermExtended';
-    src: url('Iosevka-Term-SS01-Extended.ttf') format('truetype');
+    src: url('./assets/ttf/Iosevka-Term-SS01-Extended.ttf') format('truetype');
 }
 
 canvas {
@@ -13,14 +8,12 @@ canvas {
     position: absolute;
     top:0;
     left:0;
-    width:100%;
-    height:100%;
+    width:100vh;
+    height:100vh;
     z-index:-6;
-}
-
-* {
     box-sizing: border-box;
 }
+
 
 body {
     position: absolute;
@@ -31,12 +24,8 @@ body {
     font-family: IosevkaTermExtended, monospace;
 }
 
-.center {
-    display: block;
-    margin: auto;
-}
 
-.absolute_center{
+.titlebox{
     background-color: black;
     display: block;
     position: absolute;
@@ -46,15 +35,20 @@ body {
     text-align: center;
     padding: 1rem;
     border: 21px solid black;
-}
-
-.logo {
     text-align: center;
     margin: auto;
-    font-family: IosevkaTerm, monospace;
-    line-height: normal;
+    font-family: IosevkaTermExtended, monospace;
     color: white;
 }
+
+.ascii_logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: monospace;
+}
+
 
 pre{
     line-height: 0.85rem;
@@ -84,7 +78,7 @@ p{
     text-decoration: none
 }
 
-.pre1 {
+.ascii_spacer {
     color: black;
 }
 
@@ -105,9 +99,103 @@ p{
     animation: blink-1 0.3s 1 both;
 }
 .about {
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1rem;
+    border: 60px solid black;
     z-index: 999;
     color: white;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr ;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: 
+    ". ."
+    "aboutme pic"
+    ". .";
+    gap: 0px 0px;
+}
 
+.aboutme{
+    grid-area: aboutme;
+}
+
+.aboutmetitle{
+    font-size: x-large;
+}
+
+.aboutmeimg{
+    grid-area: pic;
+}
+
+.picture {
+    width: 65%;
+}
+
+.projects{
+    width: 70vw;
+    height: 60vh;
+    background-color: black;
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1rem;
+    border: 40px solid black;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: .5fr 1fr 4fr .5fr;
+    grid-template-areas: 
+    ". . ."
+    "ptitle ptitle ptitle "
+    "p1 p2 p3"
+    ". . .";
+    gap: 0px 0px;
+}
+
+.projectstitle{
+    grid-area: ptitle;
+    color: white;
+    font-size: x-large;
+}
+
+.placeholderimg{
+    width: 50%;
+    filter: grayscale(100%);
+}
+
+.p1{
+    grid-area: p1;
+}
+
+.p2{
+    grid-area: p2;
+}
+
+.p3{
+    grid-area: p3;
+}
+
+.overlayProjects {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    visibility: hidden;
+}
+
+.overlayProjects:target{
+    visibility: visible;
+    -webkit-animation: blink-1 0.3s 1 both;
+    animation: blink-1 0.3s 1 both;
 }
 
 .cancel {
@@ -151,16 +239,11 @@ p{
 
 }
 
-
-.picture {
-    width: 65%;
-}
-
 .mail {
     font-size: xx-large;
 }
 
-/*Modal Animation*/
+/*Animacion modal*/
 
 
 @-webkit-keyframes blink-1 {
@@ -193,47 +276,45 @@ p{
     --glitch-duration: 2s;
 }
 
-#hero {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: white;
-    font-family: monospace;
-}
 
-#hero > pre {
+
+.ascii_logo > pre {
     position: absolute;
     left: 49.5%;
     top: 43%;
     transform: translate(-50%, -50%);
     z-index: 1;
-} #hero > pre::before {
-      content: '';
-      position: absolute;
-      left: 3px;
-      opacity: 1;
-      z-index: -1;
-  } #hero > pre::after {
-        content: '';
-        position: absolute;
-        left: 2px;
-        opacity: 1;
-        z-index: -1;
-    }
+}
 
-#hero > pre:nth-child(1) {
+.ascii_logo > pre::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    opacity: 1;
+    z-index: -1;
+}
+
+.ascii_logo > pre::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    opacity: 1;    
+    z-index: -1;
+}
+
+.ascii_logo > pre:nth-child(1) {
     animation: glitch1 var(--glitch-duration) infinite steps(1, end);
 }
-#hero > pre:nth-child(2) {
+.ascii_logo > pre:nth-child(2) {
     animation: glitch2 var(--glitch-duration) infinite steps(1, end);
 }
-#hero > pre:nth-child(3) {
+.ascii_logo > pre:nth-child(3) {
     animation: glitch3 var(--glitch-duration) infinite steps(1, end);
 }
-#hero > pre:nth-child(4) {
+.ascii_logo > pre:nth-child(4) {
     animation: glitch4 var(--glitch-duration) infinite steps(1, end);
 }
-#hero > pre:nth-child(5) {
+.ascii_logo > pre:nth-child(5) {
     animation: glitch5 var(--glitch-duration) infinite steps(1, end);
 }
 
