@@ -128,7 +128,7 @@ p{
 
 .aboutmetext{
     grid-area: aboutme;
-    font-size: small;
+    font-size: x-small;
 }
 
 .aboutmetitle{
