@@ -44,7 +44,7 @@ body {
     color: white;
 }
 
-.ascii_logo {
+.ascii-logo {
     position: relative;
     width: 100%;
     height: 100%;
@@ -70,7 +70,7 @@ p{
     font-size: medium;
 }
 
-.btn {
+.titlebox__btn {
     border: none;
     background-color: inherit;
     color: white;
@@ -82,12 +82,12 @@ p{
     text-decoration: none
 }
 
-.ascii_spacer {
+.titlebox__ascii-spacer {
     color: black;
     font-size: xx-small;
 }
 
-.overlayAbout {
+.overlay-about {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -98,12 +98,19 @@ p{
     visibility: hidden;
 }
 
-.overlayAbout:target{
+.overlay-about__cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.overlay-about:target{
     visibility: visible;
     -webkit-animation: blink-1 0.3s 1 both;
     animation: blink-1 0.3s 1 both;
 }
-.aboutme {
+.overlay-about__content {
     width: 70vw;
     height: 60vh;
     position: absolute;
@@ -126,25 +133,25 @@ p{
     gap: 0px 0px;
 }
 
-.aboutmetext{
+.overlay-about__text{
     grid-area: aboutme;
     font-size: xx-small;
 }
 
-.aboutmetitle{
+.overlay-about__title{
     font-size: large;
     grid-area: title;
 }
 
-.aboutmeimg{
+.overlay-about__imgbox{
     grid-area: pic;
 }
 
-.picture {
+.overlay-about__img {
     width: 65%;
 }
 
-.projects{
+.overlay-projects__content{
     width: 70vw;
     height: 60vh;
     background-color: black;
@@ -166,31 +173,31 @@ p{
     gap: 0px 0px;
 }
 
-.projectstitle{
+.overlay-projects__projects-title{
     grid-area: ptitle;
     color: white;
     font-size: x-large;
     text-align: center;
 }
 
-.placeholderimg{
+.overlay-projects__placeholder-img{
     width: 30%;
     filter: grayscale(100%);
 }
 
-.p1{
+.overlay-projects__placeholderproject1{
     grid-area: p1;
 }
 
-.p2{
+.overlay-projects__placeholderproject2{
     grid-area: p2;
 }
 
-.p3{
+.overlay-projects__placeholderproject3{
     grid-area: p3;
 }
 
-.overlayProjects {
+.overlay-projects {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -201,19 +208,31 @@ p{
     visibility: hidden;
 }
 
-.overlayProjects:target{
+.overlay-projects:target{
     visibility: visible;
     -webkit-animation: blink-1 0.3s 1 both;
     animation: blink-1 0.3s 1 both;
 }
 
-.cancel {
+.overlay-projects__btn {
+    border: none;
+    background-color: inherit;
+    color: white;
+    padding: 10px 18px;
+    font-family: IosevkaTermExtended, monospace;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none
+}
+
+.pverlay-proyects__cancel {
     position: absolute;
     width: 100%;
     height: 100%;
     cursor: default;
 }
-.contact{
+.overlay-contact__content{
     background-color: black;
     display: block;
     position: absolute;
@@ -225,7 +244,7 @@ p{
     border: 30px solid black;
 }
 
-.overlayContact {
+.overlay-contact {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -236,20 +255,30 @@ p{
     visibility: hidden;
 }
 
-.overlayContact:target{
+.overlay-contact:target{
     visibility: visible;
     -webkit-animation: blink-1 0.3s 1 both;
     animation: blink-1 0.3s 1 both;
 }
 
-.contact {
+.overlay-contact__cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.overlay-contact__content {
     z-index: 999;
     color: white;
 
 }
 
-.mail {
+.overlay-contact__link {
+    display: block;
     font-size: large;
+    text-decoration: none;
+    color: white;
 }
 
 /*Animacion modal*/
@@ -287,7 +316,7 @@ p{
 
 
 
-.ascii_logo > pre {
+.ascii-logo > pre {
     position: absolute;
     left: 49.5%;
     top: 43%;
@@ -295,7 +324,7 @@ p{
     z-index: 1;
 }
 
-.ascii_logo > pre::before {
+.ascii-logo > pre::before {
     content: '';
     position: absolute;
     left: 3px;
@@ -303,7 +332,7 @@ p{
     z-index: -1;
 }
 
-.ascii_logo > pre::after {
+.ascii-logo > pre::after {
     content: '';
     position: absolute;
     left: 2px;
@@ -314,16 +343,16 @@ p{
 .ascii_logo > pre:nth-child(1) {
     animation: glitch1 var(--glitch-duration) infinite steps(1, end);
 }
-.ascii_logo > pre:nth-child(2) {
+.ascii-logo > pre:nth-child(2) {
     animation: glitch2 var(--glitch-duration) infinite steps(1, end);
 }
-.ascii_logo > pre:nth-child(3) {
+.ascii-logo > pre:nth-child(3) {
     animation: glitch3 var(--glitch-duration) infinite steps(1, end);
 }
-.ascii_logo > pre:nth-child(4) {
+.ascii-logo > pre:nth-child(4) {
     animation: glitch4 var(--glitch-duration) infinite steps(1, end);
 }
-.ascii_logo > pre:nth-child(5) {
+.ascii-logo > pre:nth-child(5) {
     animation: glitch5 var(--glitch-duration) infinite steps(1, end);
 }
 
