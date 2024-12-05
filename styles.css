@@ -157,7 +157,7 @@ p{
     text-align: center;
     padding: 1rem;
     border: 40px solid black;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .5fr 1fr 4fr .5fr;
     grid-template-areas: 
     ". . ."
@@ -171,6 +171,20 @@ p{
     grid-area: ptitle;
     color: white;
     font-size: x-large;
+}
+
+.overlay-projects__description{
+    color: white;
+    font-size: large;
+}
+
+.overlay-projects__othertext{
+    color: white;
+    font-size: x-large;
+}
+
+.overlay-projects__echo-img{
+    width: 100%;
 }
 
 .overlay-projects__placeholder-img{
@@ -188,6 +202,10 @@ p{
 
 .overlay-projects__placeholderproject3{
     grid-area: p3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay-projects {
@@ -210,10 +228,10 @@ p{
 .overlay-projects__btn {
     border: none;
     background-color: inherit;
-    color: white;
+    color: rgb(202, 202, 202);
     padding: 14px 28px;
     font-family: IosevkaTermExtended, monospace;
-    font-size: 16px;
+    font-size: large;
     cursor: pointer;
     display: inline-block;
     text-decoration: none

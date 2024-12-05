@@ -164,7 +164,7 @@ p{
     padding: 1rem;
     border: 10px solid black;
     grid-template-columns: 1fr ;
-    grid-template-rows: .5fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr 0.5fr 1fr;
     grid-template-areas: 
     "ptitle"
     "p1"
@@ -176,8 +176,25 @@ p{
 .overlay-projects__projects-title{
     grid-area: ptitle;
     color: white;
-    font-size: x-large;
+    font-size: large;
     text-align: center;
+}
+
+.overlay-projects__description{
+    grid-area: ptitle;
+    color: white;
+    font-size: small;
+    text-align: center;
+}
+
+.overlay-projects__othertext{
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+
+.overlay-projects__echo-img{
+    width: 80%;
 }
 
 .overlay-projects__placeholder-img{
@@ -195,6 +212,11 @@ p{
 
 .overlay-projects__placeholderproject3{
     grid-area: p3;
+    grid-area: p3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay-projects {
@@ -217,7 +239,7 @@ p{
 .overlay-projects__btn {
     border: none;
     background-color: inherit;
-    color: white;
+    color: rgb(202, 202, 202);
     padding: 10px 18px;
     font-family: IosevkaTermExtended, monospace;
     font-size: 12px;
@@ -226,7 +248,7 @@ p{
     text-decoration: none
 }
 
-.pverlay-proyects__cancel {
+.overlay-projects__cancel {
     position: absolute;
     width: 100%;
     height: 100%;
